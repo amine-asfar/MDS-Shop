@@ -71,6 +71,8 @@ onMounted(() => {
                         <div class="flex justify-around items-center my-5">
                             <p class="text-center">{{ product.price }}</p>
                         </div>
+                        
+                        <button class="rounded-md p-2 m-2" @click="cart.splice(cart.indexOf(product),1);totalPrice -= product.price" ><Icon name="mdi:close-thick" class="h-6 w-6 text-red-700" aria-hidden="true" /></button>
                     </div>
                     <p class=" font-bold">Total : {{ totalPrice }}</p>
 
